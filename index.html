@@ -398,117 +398,103 @@
     </section>
 
     <section class="section apply-section" id="apply">
-      <div class="container apply-grid">
-        <div class="apply-copy">
-          <p class="section-tag">Apply</p>
-          <h2>Start your application today</h2>
-          <p>
-            Complete the form below and your application will be sent directly to our team for review.
-          </p>
+  <div class="container apply-grid">
+    <div class="apply-copy">
+      <p class="section-tag">Apply</p>
+      <h2>Start your application today</h2>
+      <p>
+        Complete the form below and your application will be sent directly to our team for review.
+      </p>
 
-          <div class="apply-points">
-            <div class="apply-point">
-              <span>01</span>
-              <p>Quick application process</p>
-            </div>
-            <div class="apply-point">
-              <span>02</span>
-              <p>Reviewed by your team</p>
-            </div>
-            <div class="apply-point">
-              <span>03</span>
-              <p>Follow-up for qualified creators</p>
-            </div>
-          </div>
+      <div class="apply-points">
+        <div class="apply-point">
+          <span>01</span>
+          <p>Quick application process</p>
+        </div>
+        <div class="apply-point">
+          <span>02</span>
+          <p>Reviewed by your team</p>
+        </div>
+        <div class="apply-point">
+          <span>03</span>
+          <p>Follow-up for qualified creators</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-wrapper glass-card">
+      <form
+        action="https://formsubmit.co/06cca967da9b24ad0c66bb19da38139"
+        method="POST"
+      >
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="New Eyekandi Application" />
+        <input type="hidden" name="_template" value="table" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://welcometogulag.github.io/eyekandi/thank-you.html"
+        />
+
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="Full Name" placeholder="Your full name" required />
         </div>
 
-        <div class="form-wrapper glass-card">
-          <form
-            id="applicationForm"
-            class="application-form"
-            action="https://formsubmit.co/06cca967da9b24ad0c66bb19da38139"
-            method="POST"
-          >
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="_subject"
-              id="dynamicSubject"
-              value="New Creator Application - Eyekandi Agency"
-            />
-            <input
-              type="hidden"
-              name="Submission Reference"
-              id="submissionRef"
-              value=""
-            />
-            <input type="hidden" name="_template" value="table" />
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value="Thank you for applying to Eyekandi Agency. Our team will review your application and get in touch if you are a fit."
-            />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://welcometogulag.github.io/eyekandi/thank-you.html"
-            />
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email Address" placeholder="your@email.com" required />
+        </div>
 
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" name="Full Name" placeholder="Your full name" required />
-            </div>
+        <div class="form-group">
+          <label for="telegram">Telegram / Preferred Contact</label>
+          <input
+            type="text"
+            id="telegram"
+            name="Telegram / Preferred Contact"
+            placeholder="@username or preferred contact"
+            required
+          />
+        </div>
 
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="Email Address" placeholder="your@email.com" required />
-            </div>
+        <div class="form-group">
+          <label for="experience">Experience Level</label>
+          <select id="experience" name="Experience Level" required>
+            <option value="">Select one</option>
+            <option value="New Creator">New Creator</option>
+            <option value="Some Experience">Some Experience</option>
+            <option value="Experienced Creator">Experienced Creator</option>
+          </select>
+        </div>
 
-            <div class="form-group">
-              <label for="telegram">Telegram / Preferred Contact</label>
-              <input
-                type="text"
-                id="telegram"
-                name="Telegram / Preferred Contact"
-                placeholder="@username or preferred contact"
-                required
-              />
-            </div>
+        <div class="form-group">
+          <label for="platforms">Current Platforms</label>
+          <input
+            type="text"
+            id="platforms"
+            name="Current Platforms"
+            placeholder="OnlyFans, Instagram, X, TikTok, etc."
+          />
+        </div>
 
-            <div class="form-group">
-              <label for="experience">Experience Level</label>
-              <select id="experience" name="Experience Level" required>
-                <option value="">Select one</option>
-                <option value="New Creator">New Creator</option>
-                <option value="Some Experience">Some Experience</option>
-                <option value="Experienced Creator">Experienced Creator</option>
-              </select>
-            </div>
+        <div class="form-group">
+          <label for="message">Tell us about yourself</label>
+          <textarea
+            id="message"
+            name="About Applicant"
+            rows="5"
+            placeholder="Share your goals, background, and why you want to join."
+            required
+          ></textarea>
+        </div>
 
-            <div class="form-group">
-              <label for="platforms">Current Platforms</label>
-              <input
-                type="text"
-                id="platforms"
-                name="Current Platforms"
-                placeholder="OnlyFans, Instagram, X, TikTok, etc."
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Tell us about yourself</label>
-              <textarea
-                id="message"
-                name="About Applicant"
-                rows="5"
-                placeholder="Share your goals, background, and why you want to join."
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              Submit Application
-            </button>
+        <button type="submit" class="btn btn-primary btn-full">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
             <p id="formStatus" class="form-status"></p>
           </form>
@@ -543,6 +529,5 @@
 
   <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
