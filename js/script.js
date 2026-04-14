@@ -8,6 +8,7 @@ const cursorGlow = document.querySelector(".cursor-glow");
 const submitBtn = document.getElementById("submitBtn");
 const year = document.getElementById("year");
 const dynamicSubject = document.getElementById("dynamicSubject");
+const submissionRef = document.getElementById("submissionRef");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -96,8 +97,25 @@ if (applicationForm) {
       return;
     }
 
+    const now = new Date();
+    const timestamp =
+      now.getFullYear().toString() +
+      String(now.getMonth() + 1).padStart(2, "0") +
+      String(now.getDate()).padStart(2, "0") +
+      "-" +
+      String(now.getHours()).padStart(2, "0") +
+      String(now.getMinutes()).padStart(2, "0") +
+      String(now.getSeconds()).padStart(2, "0");
+
+    const randomId = Math.floor(1000 + Math.random() * 9000);
+    const ref = `EK-${timestamp}-${randomId}`;
+
     if (dynamicSubject) {
-      dynamicSubject.value = `New Application - ${fullName.value.trim()} - Eyekandi Agency`;
+      dynamicSubject.value = `Eyekandi Application | ${fullName.value.trim()} | ${ref}`;
+    }
+
+    if (submissionRef) {
+      submissionRef.value = ref;
     }
 
     if (submitBtn) {
