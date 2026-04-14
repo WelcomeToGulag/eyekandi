@@ -7,6 +7,7 @@ const faqQuestions = document.querySelectorAll(".faq-question");
 const cursorGlow = document.querySelector(".cursor-glow");
 const submitBtn = document.getElementById("submitBtn");
 const year = document.getElementById("year");
+const dynamicSubject = document.getElementById("dynamicSubject");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -71,16 +72,32 @@ faqQuestions.forEach((button) => {
 
 if (applicationForm) {
   applicationForm.addEventListener("submit", (e) => {
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const telegram = document.getElementById("telegram").value.trim();
-    const experience = document.getElementById("experience").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const telegram = document.getElementById("telegram");
+    const experience = document.getElementById("experience");
+    const message = document.getElementById("message");
 
     if (!fullName || !email || !telegram || !experience || !message) {
-      e.preventDefault();
-      formStatus.textContent = "Please complete all required fields.";
       return;
+    }
+
+    if (
+      !fullName.value.trim() ||
+      !email.value.trim() ||
+      !telegram.value.trim() ||
+      !experience.value.trim() ||
+      !message.value.trim()
+    ) {
+      e.preventDefault();
+      if (formStatus) {
+        formStatus.textContent = "Please complete all required fields.";
+      }
+      return;
+    }
+
+    if (dynamicSubject) {
+      dynamicSubject.value = `New Application - ${fullName.value.trim()} - Eyekandi Agency`;
     }
 
     if (submitBtn) {
@@ -88,7 +105,9 @@ if (applicationForm) {
       submitBtn.textContent = "Submitting...";
     }
 
-    formStatus.textContent = "Sending your application...";
+    if (formStatus) {
+      formStatus.textContent = "Sending your application...";
+    }
   });
 }
 
