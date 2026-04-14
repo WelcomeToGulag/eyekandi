@@ -44,7 +44,11 @@
 
   <main>
     <section class="hero" id="home">
+      <div class="hero-bg-image">
+        <img src="images/hero-model.jpg" alt="Featured Eyekandi Agency visual" />
+      </div>
       <div class="hero-overlay"></div>
+
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">Private • Premium • Creator-Focused</p>
@@ -301,33 +305,31 @@
     <section class="section testimonials">
       <div class="container">
         <div class="section-heading center">
-          <p class="section-tag">Testimonials</p>
-          <h2>Built to earn trust from the first click</h2>
+          <p class="section-tag">Why It Works</p>
+          <h2>Built to create confidence from the first impression</h2>
           <p>
-            Replace these sample testimonials with real creator feedback later.
+            Our approach is designed to help creators feel supported, positioned well,
+            and prepared to grow with more clarity.
           </p>
         </div>
 
         <div class="cards-grid three-grid">
           <article class="testimonial-card">
             <p>
-              “I finally felt like I had structure. Everything became clearer once I had a team helping with direction.”
+              Stronger branding creates a more memorable presence and a more premium overall image.
             </p>
-            <h4>— Creator A</h4>
           </article>
 
           <article class="testimonial-card">
             <p>
-              “The branding alone changed how I presented myself online. My page felt more premium and intentional.”
+              Clear strategy helps remove guesswork and gives creators a more focused direction.
             </p>
-            <h4>— Creator B</h4>
           </article>
 
           <article class="testimonial-card">
             <p>
-              “What I liked most was the support. I didn’t feel like I was trying to figure everything out by myself anymore.”
+              Consistent support makes it easier to build momentum and grow with confidence.
             </p>
-            <h4>— Creator C</h4>
           </article>
         </div>
       </div>
@@ -428,29 +430,43 @@
             method="POST"
           >
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New Eyekandi Agency Application" />
+            <input type="hidden" name="_subject" value="New Creator Application - Eyekandi Agency" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_autoresponse" value="Thank you for applying to Eyekandi Agency. Our team will review your application and get in touch if you are a fit." />
-            <input type="hidden" name="_next" value="https://welcometogulag.github.io/eyekandi/thank-you.html" />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank you for applying to Eyekandi Agency. Our team will review your application and get in touch if you are a fit."
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://welcometogulag.github.io/eyekandi/thank-you.html"
+            />
 
             <div class="form-group">
               <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+              <input type="text" id="fullName" name="Full Name" placeholder="Your full name" required />
             </div>
 
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <input type="email" id="email" name="Email Address" placeholder="your@email.com" required />
             </div>
 
             <div class="form-group">
               <label for="telegram">Telegram / Preferred Contact</label>
-              <input type="text" id="telegram" name="telegram" placeholder="@username or preferred contact" required />
+              <input
+                type="text"
+                id="telegram"
+                name="Telegram / Preferred Contact"
+                placeholder="@username or preferred contact"
+                required
+              />
             </div>
 
             <div class="form-group">
               <label for="experience">Experience Level</label>
-              <select id="experience" name="experience" required>
+              <select id="experience" name="Experience Level" required>
                 <option value="">Select one</option>
                 <option value="New Creator">New Creator</option>
                 <option value="Some Experience">Some Experience</option>
@@ -463,7 +479,7 @@
               <input
                 type="text"
                 id="platforms"
-                name="platforms"
+                name="Current Platforms"
                 placeholder="OnlyFans, Instagram, X, TikTok, etc."
               />
             </div>
@@ -472,7 +488,7 @@
               <label for="message">Tell us about yourself</label>
               <textarea
                 id="message"
-                name="message"
+                name="About Applicant"
                 rows="5"
                 placeholder="Share your goals, background, and why you want to join."
                 required
